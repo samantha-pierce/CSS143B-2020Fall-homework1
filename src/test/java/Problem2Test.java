@@ -10,7 +10,6 @@ public class Problem2Test {
     // Okay to change
     @Test
     public void testBubbleSort() {
-        // assertTrue(false);
         // add your tests here
         int inputs[][] = {
                 {},
@@ -19,7 +18,6 @@ public class Problem2Test {
                 {8,2,4},
                 {20,8,10,5,1},
         };
-
         int answer[][] = {
                 {},
                 {3},
