@@ -24,7 +24,12 @@ public class Problem1 {
         // check right half
         return recursiveSearch(data, mid + 1, end, target);
     }
-
-    // credit to https://javarevisited.blogspot.com/2017/04/recursive-binary-search-algorithm-in-java-example.html
-    // for help with implementing helper method
 }
+
+// for smaller arrays, I think that recursion and iteration both perform at similar speeds, but for
+// larger arrays, iteration will perform faster. With recursion, the recursive function calls back itself,
+// and more memory is used as the function adds itself to a memory stack, but iteration does not require as
+// much memory space, and that's why I believe that with larger arrays, iteration is faster.
+
+// credit to https://javarevisited.blogspot.com/2017/04/recursive-binary-search-algorithm-in-java-example.html
+// for help with implementing helper method
