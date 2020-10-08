@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -18,7 +19,7 @@ public class Problem2Test {
                 {8,2,4},
                 {20,8,10,5,1},
         };
-        int answer[][] = {
+        int expected[][] = {
                 {},
                 {3},
                 {1,2},
@@ -26,11 +27,14 @@ public class Problem2Test {
                 {1,5,8,10,20},
         };
 
-        assertEquals(inputs.length, answer.length);
-
         for (int i=0; i<inputs.length; i++) {
             Problem2.bubbleSort(inputs[i]);
-            assertEquals(Arrays.toString(answer[i]), Arrays.toString(inputs[i]));
+            try {
+                assertArrayEquals(expected[i], inputs[i]);
+            } catch (AssertionError e) {
+                System.out.println("test case " + i + " failed: " + e);
+                Assert.fail();
+            }
         }
     }
 
